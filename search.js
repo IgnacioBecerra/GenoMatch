@@ -21,16 +21,15 @@ x% = abs(100((traitSum/maxSum)-opposite)), where opposite is either a 0 or 1
 console.log(userTwoDB.conscientiousness.summary.score)
 */
 
-function findDif(mode){
+function findDif(wantOpposite){
 var MAX_ATTRIBUTE_SCORE = 4;
 var difference;
 
-if ( mode == "opposite") {
-	difference = algorithm(userOneInfo, userTwoInfo);	
+if ( wantOpposite == true) {
+	difference = algorithm(userOneInfo, userTwoInfo, MAX_ATTRIBUTE_SCORE);	
 }  // returns 1 if "opposite" enough, returns 0 if not
-
-if ( mode == "similar") {
-	difference = 100 - algorithm(userOneInfo, userTwoInfo);
+else {
+	difference = 100 - algorithm(userOneInfo, userTwoInfo, MAX_ATTRIBUTE_SCORE);
 }  // returns 0 if "opposite" enough, returns 1 if not
 
 return difference;
@@ -38,7 +37,7 @@ return difference;
 }
 
 // Returns the difference percentage for user one and user two
-function algorithm(userOneInfo, userTwoInfo) {
+function algorithm(userOneInfo, userTwoInfo, maxAttributeScore) {
 	var numOfAttributes = userOneInfo.length;
 	var difference = 0;
 	//for each attribute
@@ -56,7 +55,7 @@ function algorithm(userOneInfo, userTwoInfo) {
 		// calculate the difference
 		difference += abs(score1 - score2);
 	}
-	var differencePercentage = (double)difference/(numOfAttributes * MAX_ATTRIBUTE_SCORE) * 100;
+	var differencePercentage = (double)difference/(numOfAttributes * maxAttributeScore) * 100;
 	return differencePercentage;
 }
 
