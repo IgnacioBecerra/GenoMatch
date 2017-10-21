@@ -1,1 +1,21 @@
-{"phenotype":{"url_name":"conscientiousness","display_name":"Conscientiousness","category":"personality"},"population":"european","scores":[{"score":0,"text":"Tend not to be conscientious"},{"score":1,"text":"Tend not to be conscientious, slightly"},{"score":2,"text":"Intermediate"},{"score":3,"text":"Somewhat conscientious"},{"score":4,"text":"Conscientious"}],"summary":{"score":1,"text":"Tend not to be conscientious, slightly","warnings":["this is DEMO data because this user does not have genome data","reliability is low"]}}
+{
+	"phenotype":{
+	"url_name":"conscientiousness",
+	"display_name":"Conscientiousness",
+	"category":"personality"
+	},
+
+	"population":"european",
+	"scores":[
+	{"score":0,"text":"Tend not to be conscientious"},
+	{"score":1,"text":"Tend not to be conscientious, slightly"},
+	{"score":2,"text":"Intermediate"},
+	{"score":3,"text":"Somewhat conscientious"},
+	{"score":4,"text":"Conscientious"}],
+
+	"summary":{
+	"score":1,
+	"text":"Tend not to be conscientious, slightly",
+	"warnings":["this is DEMO data because this user does not have genome data","reliability is low"]
+	}
+}

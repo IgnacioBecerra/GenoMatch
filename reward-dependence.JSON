@@ -1,1 +1,21 @@
-{"phenotype":{"url_name":"reward-dependence","display_name":"Reward dependence","category":"personality"},"population":"european","scores":[{"score":0,"text":"Does not show reward dependency"},{"score":1,"text":"Does not show reward dependency"},{"score":2,"text":"Intermediate"},{"score":3,"text":"Somewhat shows reward dependency"},{"score":4,"text":"Shows reward dependency"}],"summary":{"score":null,"text":null,"warnings":["this phenotype is not available for FREE plan users"]}}
+{
+	"phenotype":{
+	"url_name":"reward-dependence",
+	"display_name":"Reward dependence",
+	"category":"personality"
+	},
+
+	"population":"european",
+	"scores":[
+	{"score":0,"text":"Does not show reward dependency"},
+	{"score":1,"text":"Does not show reward dependency"},
+	{"score":2,"text":"Intermediate"},
+	{"score":3,"text":"Somewhat shows reward dependency"},
+	{"score":4,"text":"Shows reward dependency"}],
+
+	"summary":{
+	"score":null,
+	"text":null,
+	"warnings":["this phenotype is not available for FREE plan users"]
+	}
+}

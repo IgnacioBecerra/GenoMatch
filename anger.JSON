@@ -1,1 +1,21 @@
-{"phenotype":{"url_name":"anger","display_name":"Anger","category":"personality"},"population":"european","scores":[{"score":0,"text":"Not easily angered"},{"score":1,"text":"Not easily angered, slightly"},{"score":2,"text":"Intermediate"},{"score":3,"text":"Somewhat easily angered"},{"score":4,"text":"Easily angered"}],"summary":{"score":null,"text":null,"warnings":["this phenotype is not available for FREE plan users"]}}
+{
+	"phenotype":{
+	"url_name":"anger",
+	"display_name":"Anger",
+	"category":"personality"
+	},
+
+	"population":"european",
+	"scores":[
+	{"score":0,"text":"Not easily angered"},
+	{"score":1,"text":"Not easily angered, slightly"},
+	{"score":2,"text":"Intermediate"},
+	{"score":3,"text":"Somewhat easily angered"},
+	{"score":4,"text":"Easily angered"}],
+
+	"summary":{
+	"score":null,
+	"text":null,
+	"warnings":["this phenotype is not available for FREE plan users"]
+	}
+}
