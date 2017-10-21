@@ -16,7 +16,7 @@ var userOneInfo = userOneDB.anger.summary.score;
 var userTwoInfo = userTwoDB.anger.summary.score;
 (userOneInfo/userTwoInfo should be lists containing values of these attributes)
 
-x% = abs(100((traitSum/maxSum)%-(opposite)%)), where opposite is either a 0 or 1
+x% = abs(100((traitSum/maxSum)-opposite)), where opposite is either a 0 or 1
 
 if ( mode = "opposite") {
 	algorithm(userOneInfo, userTwoInfo)...
