@@ -187,11 +187,47 @@
 	},
 
 	"openness":{
+		"phenotype":{
+		"url_name":"openness",
+		"display_name":"Openness",
+		"category":"personality"
+		},
 
+		"population":"european",
+		"scores":[
+		{"score":0,"text":"Tend not to be empathetic"},
+		{"score":1,"text":"Tend not to be empathetic, slightly"},
+		{"score":2,"text":"Intermediate"},
+		{"score":3,"text":"Empathetic"},
+		{"score":4,"text":"Empathetic"}],
+
+		"summary":{
+		"score":1,
+		"text":"Tend not to be empathetic, slightly",
+		"warnings":["this is DEMO data because this user does not have genome data","reliability is low"]
+		}
 	},
 
 	"reward-dependence":{
+		"phenotype":{
+		"url_name":"reward-dependence",
+		"display_name":"Reward dependence",
+		"category":"personality"
+		},
 
+		"population":"european",
+		"scores":[
+		{"score":0,"text":"Does not show reward dependency"},
+		{"score":1,"text":"Does not show reward dependency"},
+		{"score":2,"text":"Intermediate"},
+		{"score":3,"text":"Somewhat shows reward dependency"},
+		{"score":4,"text":"Shows reward dependency"}],
+
+		"summary":{
+		"score":null,
+		"text":null,
+		"warnings":["this phenotype is not available for FREE plan users"]
+		}
 	}
 
 }
