@@ -1,1 +1,21 @@
-{"phenotype":{"url_name":"novelty-seeking","display_name":"Novelty seeking","category":"personality"},"population":"european","scores":[{"score":0,"text":"Weak novelty-seeking behavior"},{"score":1,"text":"Weak novelty-seeking behavior"},{"score":2,"text":"Intermediate"},{"score":3,"text":"Some novelty-seeking behavior"},{"score":4,"text":"Strong novelty-seeking behavior"}],"summary":{"score":null,"text":null,"warnings":["this phenotype is not available for FREE plan users"]}}
+{
+	"phenotype":{
+	"url_name":"novelty-seeking",
+	"display_name":"Novelty seeking",
+	"category":"personality"
+	},
+
+	"population":"european",
+	"scores":[
+	{"score":0,"text":"Weak novelty-seeking behavior"},
+	{"score":1,"text":"Weak novelty-seeking behavior"},
+	{"score":2,"text":"Intermediate"},
+	{"score":3,"text":"Some novelty-seeking behavior"},
+	{"score":4,"text":"Strong novelty-seeking behavior"}],
+
+	"summary":{
+	"score":null,
+	"text":null,
+	"warnings":["this phenotype is not available for FREE plan users"]
+	}
+}

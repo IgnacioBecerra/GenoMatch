@@ -1,1 +1,21 @@
-{"phenotype":{"url_name":"harm-avoidance","display_name":"Harm avoidance","category":"personality"},"population":"european","scores":[{"score":0,"text":"Weak harm avoidance behavior"},{"score":1,"text":"Weak harm avoidance behavior"},{"score":2,"text":"Intermediate"},{"score":3,"text":"Some harm avoidance behavior"},{"score":4,"text":"Strong harm avoidance behavior"}],"summary":{"score":null,"text":null,"warnings":["this phenotype is not available for FREE plan users"]}}
+{
+	"phenotype":{
+	"url_name":"harm-avoidance",
+	"display_name":"Harm avoidance",
+	"category":"personality"
+	},
+
+	"population":"european",
+	"scores":[
+	{"score":0,"text":"Weak harm avoidance behavior"},
+	{"score":1,"text":"Weak harm avoidance behavior"},
+	{"score":2,"text":"Intermediate"},
+	{"score":3,"text":"Some harm avoidance behavior"},
+	{"score":4,"text":"Strong harm avoidance behavior"}],
+
+	"summary":{
+	"score":null,
+	"text":null,
+	"warnings":["this phenotype is not available for FREE plan users"]
+	}
+}
