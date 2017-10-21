@@ -1,0 +1,75 @@
+{
+	"agreeableness":{
+
+		"phenotype":{
+		"url_name":"agreeableness",
+		"display_name":"Agreeableness",
+		"category":"personality"
+		},
+
+		"population":"european",
+		"scores":[
+		{"score":0,"text":"Tend not to be agreeable"},
+		{"score":1,"text":"Tend not to be agreeable, slightly"},
+		{"score":2,"text":"Intermediate"},
+		{"score":3,"text":"Slight tendency to be agreeable"},
+		{"score":4,"text":"Stronger tendency to be agreeable"}],
+
+		"summary":{
+		"score":2,
+		"text":"Intermediate",
+		"warnings":["this is DEMO data because this user does not have genome data",
+		"reliability is low"]
+		}
+	},
+
+
+	"anger":{
+		"phenotype":{
+			"url_name":"anger",
+			"display_name":"Anger",
+			"category":"personality"},
+			"population":"european",
+			"scores":[
+			{"score":0,
+			"text":"Not easily angered"},
+			{"score":1,
+			"text":"Not easily angered, slightly"},
+			{"score":2,"text":"Intermediate"},
+			{"score":3,
+			"text":"Somewhat easily angered"},
+			{"score":4,"text":"Easily angered"}],
+
+			"summary":{
+			"score":null,
+			"text":null,
+			"warnings":["this phenotype is not available for FREE plan users"]
+		}
+	},
+
+	"conscientiousness":{
+
+		"phenotype":{
+		"url_name":"conscientiousness",
+		"display_name":"Conscientiousness",
+		"category":"personality"},
+		"population":"european","scores":[
+		{"score":0,
+		"text":"Tend not to be conscientious"},
+		{"score":1,
+		"text":"Tend not to be conscientious, slightly"},
+		{"score":2,
+		"text":"Intermediate"},
+		{"score":3,
+		"text":"Somewhat conscientious"},
+		{"score":4,"text":"Conscientious"}],
+		"summary":{
+		"score":1,
+		"text":"Tend not to be conscientious, slightly",
+		"warnings":["this is DEMO data because this user does not have genome data",
+		"reliability is low"]
+		}
+	}
+
+
+}
