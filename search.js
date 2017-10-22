@@ -1,6 +1,7 @@
 var userOneDB = require('./userOne.json');
 var userTwoDB = require('./userTwo.json');
 var MAX_ATTRIBUTE_SCORE = 4;
+var ALLOWED_VARIANCE = 70;
 var difference = 0;
 
 
@@ -37,21 +38,29 @@ function submit(){
 }
 
 
-function findDif(wantOpposite){
-	var difference;
+function findDif() {
+	var percentage = algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);	
+	document.write("called findDif()");
+	report(percentage);
 
-	if ( wantOpposite == true) {
-		difference = algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);	
-	 // returns 0 if "opposite" enough, returns 1 if not
-	console.log("called findDif()");
-
-	return difference;
-		//console.log("you match/dont match with user two based on your preferences (A,B,C) by x percent!");
-}
 function findSame() {
-	difference = 100 - algorithm(userOneInfo, userTwoInfo, MAX_ATTRIBUTE_SCORE);
-	return difference;
+	var percentage = 100 - algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);
+	document.write("called findSame()");
+	report(percentage);
 }
+
+function report(percentage) {
+	var matchRating = "";
+	if(percentage >= ALLOWED_VARIANCE) {
+		matchRating += "You match ";
+	}
+	else {
+		matchRating += "You don't match ";
+	}
+	matchRating += "with user two based on your preferences by " + percentage + " percent!";
+	document.write(matchRating);
+}
+
 // Returns the difference percentage for user one and user two
 function algorithm(userOneInfo, maxAttributeScore) {
 	var numOfAttributes = userOneInfo.length;
