@@ -31,10 +31,10 @@ function findSame() {
 
 function report(percentage) {
 	if(findSimilarPartner == false) {
-		var percentage = algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);	
+		var percentage = algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE, arr);	
 	}
 	if(findSimilarPartner == true) {
-		var percentage = HUNDRED_PERCENT - algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);
+		var percentage = HUNDRED_PERCENT - algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE, arr);
 	}
 
 	var matchRating = "";
