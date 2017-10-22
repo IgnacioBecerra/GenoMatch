@@ -1,28 +1,7 @@
-var userOneDB = require('./userOne.json');
-var userTwoDB = require('./userTwo.json');
 var MAX_ATTRIBUTE_SCORE = 4;
 var ALLOWED_VARIANCE = 70;
 var HUNDRED_PERCENT = 100;
-var findSamePartner = true;
-
-
-/**
-
-After button("upload") is clicked:
-
-
-
-get what attributes the user chooses:  e.g. anger, depression,
-get what mode user use : e.g. "opposite" "similar"
-
-var userOneInfo = userOneDB.anger.summary.score;
-var userTwoInfo = userTwoDB.anger.summary.score;
-(userOneInfo/userTwoInfo should be lists containing values of these attributes)
-
-x% = abs(100((traitSum/maxSum)-opposite)), where opposite is either a 0 or 1
-
-console.log(userTwoDB.conscientiousness.summary.score)
-*/
+var findSimilarPartner = true;
 
 arr = []
 userOneInfo = [];
@@ -93,12 +72,3 @@ function algorithm(userOneInfo, maxAttributeScore, arr) {
 	var differencePercentage = (double)difference/(numOfAttributes * maxAttributeScore) * HUNDRED_PERCENT;
 	return differencePercentage;
 }
-
-
-
-
-
-
-
-
-
