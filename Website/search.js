@@ -81,8 +81,8 @@ function algorithm(userOneInfo, maxAttributeScore, arr) {
 		
 		var attribute = userOneInfo[i];
 
-		console.log(attribute);
-		console.log(userOne[attribute.value]);
+		//sconsole.log(attribute);
+		//console.log(userOne[attribute.value]);
 		var score1 = userOne[attribute.value].summary.score;
 		var score2 = userTwo[attribute.value].summary.score;
 
