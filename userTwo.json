@@ -41,8 +41,8 @@
 			{"score":4,"text":"Easily angered"}],
 
 			"summary":{
-			"score":null,
-			"text":null,
+			"score":1,
+			"text":"Not easily angered, slightly",
 			"warnings":["this phenotype is not available for FREE plan users"]
 		}
 	},
@@ -88,8 +88,8 @@
 		{"score":4,"text":"Prone to depression"}],
 
 		"summary":{
-		"score":null,
-		"text":null,
+		"score":4,
+		"text":"Prone to depression",
 		"warnings":["this phenotype is not available for FREE plan users"]
 		}
 
@@ -135,8 +135,8 @@
 		{"score":4,"text":"Strong harm avoidance behavior"}],
 
 		"summary":{
-		"score":null,
-		"text":null,
+		"score":2,
+		"text":"Intermediate",
 		"warnings":["this phenotype is not available for FREE plan users"]
 		}
 	},
@@ -180,8 +180,8 @@
 		{"score":4,"text":"Strong novelty-seeking behavior"}],
 
 		"summary":{
-		"score":null,
-		"text":null,
+		"score":3,
+		"text":"Some novelty-seeking behavior",
 		"warnings":["this phenotype is not available for FREE plan users"]
 		}
 	},
@@ -224,8 +224,8 @@
 		{"score":4,"text":"Shows reward dependency"}],
 
 		"summary":{
-		"score":null,
-		"text":null,
+		"score":3,
+		"text":"Somewhat shows reward dependency",
 		"warnings":["this phenotype is not available for FREE plan users"]
 		}
 	}
