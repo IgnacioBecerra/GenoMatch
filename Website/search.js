@@ -1,19 +1,20 @@
-	//var userOneDB = require('./userOne.json');
-//var userTwoDB = require('./userTwo.json');
 var MAX_ATTRIBUTE_SCORE = 4;
 var ALLOWED_VARIANCE = 70;
 var HUNDRED_PERCENT = 100;
-var findSimilarPartner = true;
+var findSimilarPartner = false;
+var percentage = 0;
 
 userOneInfo = [];
 
 
 function findDif() {
-	findSimilarPartner = false;
+	//findSimilarPartner = false;
+	localStorage.setItem("findSimilarPartner", false);
 }
 
 function findSame() {
-	findSimilarPartner = true;
+	//findSimilarPartner = true;
+	localStorage.setItem("findSimilarPartner", true);
 }
 
 
@@ -27,12 +28,10 @@ function report() {
 	}
 	})
 
-	var percentage = 0;
-
-	if(findSimilarPartner === false) {
+	if(localStorage.getItem("findSimilarPartner") == false) {
 		percentage = algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE, arr);	
 	}
-	if(findSimilarPartner === true) {
+	else {
 		percentage = HUNDRED_PERCENT - algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE, arr);
 	}
 
@@ -46,6 +45,7 @@ function report() {
 	matchRating += "with user two based on your preferences by "
 	matchRating += percentage;
 	matchRating += " percent!";
+
 	var old = document.body.innerHTML;
 	document.body.innerHTML = "";
 	var results = document.createElement("h1");
@@ -94,6 +94,7 @@ function algorithm(userOneInfo, maxAttributeScore, arr) {
 	
 
 	var differencePercentage = difference/(numOfAttributes * maxAttributeScore) * HUNDRED_PERCENT;
+	differencePercentage = parseFloat(Math.round(differencePercentage * 100) / 100).toFixed(2);
 	return differencePercentage;
 }
 
