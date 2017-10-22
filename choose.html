@@ -25,29 +25,30 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
-
+  
+  <!-- JavaScript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="search.js"></script>
+  
 </head>
 <body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="fullscreen-bg">
-    <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
-        <source src="video.mp4" type="video/mp4">
-    </video>
-</div>
-<div class="container">
+  <div class="container">
     <div class="row">
-        <div class="one-half column" style="margin-top: 25%">
-            <h4>Welcome to GenoMatch!</h4>
-            <p>Get started by uploading your Genome</p>
-            <p><input class="button-primary" type="button" value="Upload"></p>
-            <p><input class="button-secondary" type="button" value="Next Page" onclick="document.location.href = '/choose.html' "></p>
-        </div>
-    </div>
-</div>
-  
+      <div class="5 column" style="margin-top: 25%">
+        <h4>Choose the Traits you are looking for</h4>
 
+                <!-- radio -->
+<form action="">
+  <input class="button-primary" type="button" value="Similar" onclick="document.location.href = '/buttons.html' ">
+  <input class="button-primary" type="button" value="Opposite" onclick="document.location.href = '/buttons.html' ">
+</form>
+
+      </div>
+    </div>
+  </div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

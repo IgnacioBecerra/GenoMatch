@@ -34,7 +34,7 @@ function submit(){
 		if (elem.checked) {
 			userOneInfo.push(elem);     
 		}
-	})
+	}
 }
 
 
