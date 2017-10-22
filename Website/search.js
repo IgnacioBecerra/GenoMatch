@@ -6,15 +6,18 @@ var percentage = 0;
 
 userOneInfo = [];
 
-
 function findDif() {
-	//findSimilarPartner = false;
+		document.body.innerHTML = document.getElementById("body2").innerHTML;
+
+	findSimilarPartner = false;
 	localStorage.setItem("findSimilarPartner", false);
 }
 
 function findSame() {
-	//findSimilarPartner = true;
+	findSimilarPartner = true;
+		document.body.innerHTML = document.getElementById("body2").innerHTML;
 	localStorage.setItem("findSimilarPartner", true);
+
 }
 
 
@@ -28,7 +31,7 @@ function report() {
 	}
 	})
 
-	if(localStorage.getItem("findSimilarPartner") == false) {
+	if(findSimilarPartner == false) {
 		percentage = algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE, arr);	
 	}
 	else {
@@ -43,7 +46,7 @@ function report() {
 		matchRating += "You don't match ";
 	}
 	matchRating += "with user two based on your preferences by "
-	matchRating += percentage;
+	matchRating += parseFloat(percentage).toFixed(2);
 	matchRating += " percent!";
 
 	var old = document.body.innerHTML;
@@ -97,7 +100,6 @@ function algorithm(userOneInfo, maxAttributeScore, arr) {
 	differencePercentage = parseFloat(Math.round(differencePercentage * 100) / 100).toFixed(2);
 	return differencePercentage;
 }
-
 
 
 
