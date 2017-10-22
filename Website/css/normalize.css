@@ -222,6 +222,22 @@ pre {
   overflow: auto;
 }
 
+h1 {
+   text-align: center;
+margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+
+}
+
+#buttondiv {
+  text-align: center;
+}
+
+
+}
+
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
