@@ -1,6 +1,6 @@
 var userOneDB = require('./userOne.json');
 var userTwoDB = require('./userTwo.json');
-
+var MAX_ATTRIBUTE_SCORE = 4;
 
 
 /**
@@ -22,7 +22,6 @@ console.log(userTwoDB.conscientiousness.summary.score)
 */
 
 function findDif(wantOpposite){
-	var MAX_ATTRIBUTE_SCORE = 4;
 	var difference;
 
 	if ( wantOpposite == true) {
@@ -37,24 +36,22 @@ function findDif(wantOpposite){
 }
 
 // Returns the difference percentage for user one and user two
-function algorithm(userOneInfo, userTwoInfo, maxAttributeScore) {
+function algorithm(userOneInfo, maxAttributeScore) {
 	var numOfAttributes = userOneInfo.length;
 	var difference = 0;
+
 	//for each attribute
 	for(var i = 0; i < numOfAttributes; i++) {
 		// get the score for the attribute for userOne
 		var attribute = userOneInfo[i];
-		var scoreTrait = $.grep(attribute, function(e){ return e.id == id; });
-		score1 = scoreTrait[0].foo; 
-
-		// get the score for the attribute for userTwo
-		attribute = userTwoInfo[i];
-		scoreTrait = $.grep(attribute, function(e){ return e.id == id; });
-		score2 = scoreTrait[0].foo;
+		var score1 = userOneDB[attribute.toString()].summary.score;
+		var score2 = userTwoDB[attribute.toString()].summary.score;
 
 		// calculate the difference
 		difference += abs(score1 - score2);
+
 	}
+
 	var differencePercentage = (double)difference/(numOfAttributes * maxAttributeScore) * 100;
 	return differencePercentage;
 }
