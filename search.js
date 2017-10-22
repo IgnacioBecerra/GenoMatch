@@ -1,6 +1,7 @@
 var userOneDB = require('./userOne.json');
 var userTwoDB = require('./userTwo.json');
 var MAX_ATTRIBUTE_SCORE = 4;
+var difference = 0;
 
 
 /**
@@ -21,20 +22,18 @@ x% = abs(100((traitSum/maxSum)-opposite)), where opposite is either a 0 or 1
 console.log(userTwoDB.conscientiousness.summary.score)
 */
 
-function findDif(wantOpposite){
-	var difference;
-
-	if ( wantOpposite == true) {
+function findDif(){
 		difference = algorithm(userOneInfo, userTwoInfo, MAX_ATTRIBUTE_SCORE);	
-	}  // returns 1 if "opposite" enough, returns 0 if not
-	else {
-		difference = 100 - algorithm(userOneInfo, userTwoInfo, MAX_ATTRIBUTE_SCORE);
-	}  // returns 0 if "opposite" enough, returns 1 if not
+	 // returns 0 if "opposite" enough, returns 1 if not
+	console.log("called findDif()");
 
 	return difference;
-		console.log("you match/dont match with user two based on your preferences (A,B,C) by x percent!");
+		//console.log("you match/dont match with user two based on your preferences (A,B,C) by x percent!");
 }
-
+function findSame() {
+	difference = 100 - algorithm(userOneInfo, userTwoInfo, MAX_ATTRIBUTE_SCORE);
+	return difference;
+}
 // Returns the difference percentage for user one and user two
 function algorithm(userOneInfo, maxAttributeScore) {
 	var numOfAttributes = userOneInfo.length;
