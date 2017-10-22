@@ -46,7 +46,27 @@ function report() {
 	matchRating += "with user two based on your preferences by "
 	matchRating += percentage;
 	matchRating += " percent!";
-	document.write(matchRating);
+	var old = document.body.innerHTML;
+	document.body.innerHTML = "";
+	var results = document.createElement("h1");
+	results.id="results";
+	var message = document.createTextNode(matchRating);
+	results.appendChild(message);
+
+	document.body.appendChild(results); //(clears all content from page)
+	var div = document.createElement("div");
+	div.id = "buttondiv";
+	var btn = document.createElement("button");
+	var btntext = document.createTextNode("back");
+	btn.appendChild(btntext)
+	div.appendChild(btn);
+	document.body.appendChild(div);
+	btn.onclick = function(){
+	document.body.innerHTML = old;
+	}
+	//var check = document.getElementsByID("results");
+	//console.log(check);
+
 }
 
 // Returns the difference percentage for user one and user two
