@@ -1,17 +1,16 @@
-//var userOneDB = require('./userOne.json');
+	//var userOneDB = require('./userOne.json');
 //var userTwoDB = require('./userTwo.json');
 var MAX_ATTRIBUTE_SCORE = 4;
 var ALLOWED_VARIANCE = 70;
 var HUNDRED_PERCENT = 100;
-var findSamePartner = true;
+var findSimilarPartner = true;
 
-arr = []
+var arr = document.getElementsByName("type");
 userOneInfo = [];
 
 // if user checks a check box, get the name/attribute of the check box
 //and stores it to an array
 function submit(){
-	var arr = document.getElementsByName("type");
 	arr.forEach(function(elem){
 		if (elem.checked) {
 			userOneInfo.push(elem);     
@@ -34,7 +33,7 @@ function report(percentage) {
 		percentage = algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);	
 	}
 	if(findSimilarPartner === true) {
-		percentage = HUNDRED_PERCENT - algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);
+		percentage = HUNDRED_PERCENT - algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE, arr);
 	}
 
 	var matchRating = "";
