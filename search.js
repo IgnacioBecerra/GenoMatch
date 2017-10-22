@@ -3,6 +3,7 @@ var userTwoDB = require('./userTwo.json');
 var MAX_ATTRIBUTE_SCORE = 4;
 var ALLOWED_VARIANCE = 70;
 var HUNDRED_PERCENT = 100;
+var findSamePartner = true;
 
 
 /**
@@ -35,21 +36,28 @@ function submit(){
 			userOneInfo.push(elem);     
 		}
 	}
+	console.log("called submit()");
 }
 
 
 function findDif() {
-	var percentage = algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);	
+	findSimilarPartner = false;
 	document.write("called findDif()");
-	report(percentage);
+}
 
 function findSame() {
-	var percentage = HUNDRED_PERCENT - algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);
+	findSimilarPartner = true;
 	document.write("called findSame()");
-	report(percentage);
 }
 
 function report(percentage) {
+	if(findSimilarPartner == false) {
+		var percentage = algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);	
+	}
+	if(findSimilarPartner == true) {
+		var percentage = HUNDRED_PERCENT - algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);
+	}
+
 	var matchRating = "";
 	if(percentage >= ALLOWED_VARIANCE) {
 		matchRating += "You match ";
