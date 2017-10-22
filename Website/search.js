@@ -1,5 +1,5 @@
-var userOneDB = require('./userOne.json');
-var userTwoDB = require('./userTwo.json');
+//var userOneDB = require('./userOne.json');
+//var userTwoDB = require('./userTwo.json');
 var MAX_ATTRIBUTE_SCORE = 4;
 var ALLOWED_VARIANCE = 70;
 var HUNDRED_PERCENT = 100;
