@@ -28,7 +28,11 @@ function findSame() {
 	findSimilarPartner = true;
 }
 
-function report(percentage) {
+
+function report() {
+
+	var percentage = 0;
+
 	if(findSimilarPartner === false) {
 		percentage = algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);	
 	}
@@ -43,7 +47,9 @@ function report(percentage) {
 	else {
 		matchRating += "You don't match ";
 	}
-	matchRating += "with user two based on your preferences by " + percentage + " percent!";
+	matchRating += "with user two based on your preferences by "
+	matchRating += percentage;
+	matchRating += " percent!";
 	document.write(matchRating);
 }
 
