@@ -1,9 +1,8 @@
 # GenoMatch
-Tinder... but with genetics in play.
+Dating... but with genetics in play.
 
-percentageMatch = 100 * (traitSum/maxSum),
-	if(opposite){
-		percentageMatch = 100 - percentageMatch,
-	}
+	Hello and welcome, introducing the Genomatch app.
 
-	return percentageMatch,
+	The purpose of GenoMatch is to allow users to choose their dating partners via similarities or differences in genetics.
+
+	We identify up to 10 traits that a user selects, add up the scores the user gives for each of those traits, and find partners whose sum of scores best match the user's.
