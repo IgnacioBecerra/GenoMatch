@@ -21,6 +21,22 @@ x% = abs(100((traitSum/maxSum)-opposite)), where opposite is either a 0 or 1
 console.log(userTwoDB.conscientiousness.summary.score)
 */
 
+
+arr = []
+userOneInfo = [];
+
+// if user checks a check box, get the name/attribute of the check box
+//and stores it to an array
+function submit(){
+	var arr = document.getElementsByName("type");
+	arr.forEach(function(elem){
+		if (elem.checked) {
+			userOneInfo.push(elem);     
+		}
+	})
+}
+
+
 function findDif(wantOpposite){
 	var difference;
 
