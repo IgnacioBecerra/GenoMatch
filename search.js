@@ -2,6 +2,7 @@ var userOneDB = require('./userOne.json');
 var userTwoDB = require('./userTwo.json');
 var MAX_ATTRIBUTE_SCORE = 4;
 var ALLOWED_VARIANCE = 70;
+var HUNDRED_PERCENT = 100;
 
 
 /**
@@ -43,7 +44,7 @@ function findDif() {
 	report(percentage);
 
 function findSame() {
-	var percentage = 100 - algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);
+	var percentage = HUNDRED_PERCENT - algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);
 	document.write("called findSame()");
 	report(percentage);
 }
@@ -81,7 +82,7 @@ function algorithm(userOneInfo, maxAttributeScore, arr) {
 		}
 	}
 
-	var differencePercentage = (double)difference/(numOfAttributes * maxAttributeScore) * 100;
+	var differencePercentage = (double)difference/(numOfAttributes * maxAttributeScore) * HUNDRED_PERCENT;
 	return differencePercentage;
 }
 
