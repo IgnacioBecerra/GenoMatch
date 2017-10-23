@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 var MAX_ATTRIBUTE_SCORE = 4;
 var ALLOWED_VARIANCE = 70;
 var HUNDRED_PERCENT = 100;
@@ -7,15 +10,26 @@ var percentage = 0;
 
 userOneInfo = [];
 
-
 function findDif() {
+		document.body.innerHTML = document.getElementById("body2").innerHTML;
+
 	findSimilarPartner = false;
+<<<<<<< HEAD
 	localStorage.setItem("findSimilarPartner", findSimilarPartner);
+=======
+	localStorage.setItem("findSimilarPartner", false);
+>>>>>>> origin/master
 }
 
 function findSame() {
 	findSimilarPartner = true;
+<<<<<<< HEAD
 	localStorage.setItem("findSimilarPartner", findSimilarPartner);
+=======
+		document.body.innerHTML = document.getElementById("body2").innerHTML;
+	localStorage.setItem("findSimilarPartner", true);
+
+>>>>>>> origin/master
 }
 
 
@@ -28,7 +42,12 @@ function report() {
 			userOneInfo.push(elem);     
 		}
 	})
+<<<<<<< HEAD
 	if(localStorage.getItem("findSimilarPartner") == false) {
+=======
+
+	if(findSimilarPartner == false) {
+>>>>>>> origin/master
 		percentage = algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE, arr);	
 	}
 	else {
@@ -43,9 +62,30 @@ function report() {
 		matchRating += "You don't match ";
 	}
 	matchRating += "with user two based on your preferences by "
-	matchRating += percentage;
+	matchRating += parseFloat(percentage).toFixed(2);
 	matchRating += " percent!";
-	document.write(matchRating);
+
+	var old = document.body.innerHTML;
+	document.body.innerHTML = "";
+	var results = document.createElement("h1");
+	results.id="results";
+	var message = document.createTextNode(matchRating);
+	results.appendChild(message);
+
+	document.body.appendChild(results); //(clears all content from page)
+	var div = document.createElement("div");
+	div.id = "buttondiv";
+	var btn = document.createElement("button");
+	var btntext = document.createTextNode("back");
+	btn.appendChild(btntext)
+	div.appendChild(btn);
+	document.body.appendChild(div);
+	btn.onclick = function(){
+	document.body.innerHTML = old;
+	}
+	//var check = document.getElementsByID("results");
+	//console.log(check);
+
 }
 
 // Returns the difference percentage for user one and user two
@@ -59,6 +99,11 @@ function algorithm(userOneInfo, maxAttributeScore, arr) {
 		
 		var attribute = userOneInfo[i];
 
+<<<<<<< HEAD
+=======
+		//sconsole.log(attribute);
+		//console.log(userOne[attribute.value]);
+>>>>>>> origin/master
 		var score1 = userOne[attribute.value].summary.score;
 		var score2 = userTwo[attribute.value].summary.score;
 
@@ -73,7 +118,6 @@ function algorithm(userOneInfo, maxAttributeScore, arr) {
 	differencePercentage = parseFloat(Math.round(differencePercentage * 100) / 100).toFixed(2);
 	return differencePercentage;
 }
-
 
 
 
