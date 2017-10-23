@@ -7,7 +7,7 @@ var percentage = 0;
 userOneInfo = [];
 
 function findDif() {
-		document.body.innerHTML = document.getElementById("body2").innerHTML;
+	document.body.innerHTML = document.getElementById("body2").innerHTML;
 
 	findSimilarPartner = false;
 	localStorage.setItem("findSimilarPartner", false);
@@ -15,14 +15,13 @@ function findDif() {
 
 function findSame() {
 	findSimilarPartner = true;
-		document.body.innerHTML = document.getElementById("body2").innerHTML;
+	document.body.innerHTML = document.getElementById("body2").innerHTML;
 	localStorage.setItem("findSimilarPartner", true);
 
 }
 
 
 function report() {
-
 	var arr = document.getElementsByName("type");
 
 	arr.forEach(function(elem){
@@ -31,7 +30,7 @@ function report() {
 	}
 	})
 
-	if(findSimilarPartner == false) {
+	if(findSimilarPartner === false) {
 		percentage = algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE, arr);	
 	}
 	else {
@@ -45,9 +44,18 @@ function report() {
 	else {
 		matchRating += "You don't match ";
 	}
-	matchRating += "with user two based on your preferences by "
+	matchRating += "with user two based on your preferences! You are "
+	if(percentage < ALLOWED_VARIANCE) {
+	    matchRating += "only "   
+	}
 	matchRating += parseFloat(percentage).toFixed(2);
-	matchRating += " percent!";
+	matchRating += "% ";
+	if(findSimilarPartner === true) {
+	    matchRating += "alike!";
+	}
+	else {
+	    matchRating += "different!";
+	}
 
 	var old = document.body.innerHTML;
 	document.body.innerHTML = "";
@@ -67,9 +75,6 @@ function report() {
 	btn.onclick = function(){
 	document.body.innerHTML = old;
 	}
-	//var check = document.getElementsByID("results");
-	//console.log(check);
-
 }
 
 // Returns the difference percentage for user one and user two
@@ -83,9 +88,6 @@ function algorithm(userOneInfo, maxAttributeScore, arr) {
 		
 		
 		var attribute = userOneInfo[i];
-
-		//sconsole.log(attribute);
-		//console.log(userOne[attribute.value]);
 		var score1 = userOne[attribute.value].summary.score;
 		var score2 = userTwo[attribute.value].summary.score;
 
@@ -100,10 +102,6 @@ function algorithm(userOneInfo, maxAttributeScore, arr) {
 	differencePercentage = parseFloat(Math.round(differencePercentage * 100) / 100).toFixed(2);
 	return differencePercentage;
 }
-
-
-
-
 
 
 
