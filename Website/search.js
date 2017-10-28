@@ -74,6 +74,7 @@ function report() {
 	document.body.appendChild(div);
 	btn.onclick = function(){
 	document.body.innerHTML = old;
+	location.reload();
 	}
 }
 
@@ -83,7 +84,7 @@ function algorithm(userOneInfo, maxAttributeScore, arr) {
 	var numOfAttributes = userOneInfo.length;
 	var difference = 0;
 
-	// loop through arr to search for the attributes chosen by the user
+	// Loop through arr to search for the attributes chosen by the user
 	for(var i = 0; i < numOfAttributes; i++) {
 		
 		
@@ -91,8 +92,7 @@ function algorithm(userOneInfo, maxAttributeScore, arr) {
 		var score1 = userOne[attribute.value].summary.score;
 		var score2 = userTwo[attribute.value].summary.score;
 
-		console.log(score1, score2);
-		// calculate the difference
+		// Calculate the difference
 		difference += Math.abs(score1 - score2);
 
 	}
