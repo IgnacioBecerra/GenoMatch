@@ -23,6 +23,12 @@ function findSame() {
 
 function validateReport() {
 	var arr = document.getElementsByName("type");
+	arr.forEach(function(elem){
+	if (elem.checked) {
+		userOneInfo.push(elem);     
+	}
+	})
+	
 	if(arr[0] === nul) {
 		window.alert("Please choose at least one trait.");
 	}
@@ -32,12 +38,6 @@ function validateReport() {
 }
 
 function report(arr) {
-	arr.forEach(function(elem){
-	if (elem.checked) {
-		userOneInfo.push(elem);     
-	}
-	})
-
 	if(findSimilarPartner === false) {
 		percentage = algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE, arr);	
 	}
