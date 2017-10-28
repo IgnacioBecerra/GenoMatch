@@ -24,14 +24,14 @@ function findSame() {
 function validateReport() {
 	var arr = document.getElementsByName("type");
 	if(arr.length > 0) {
-		report();	
+		report(arr);	
 	}
 	else {
 		window.alert("Please choose at least one trait.");	
 	}
 }
 
-function report() {
+function report(arr) {
 	arr.forEach(function(elem){
 	if (elem.checked) {
 		userOneInfo.push(elem);     
