@@ -23,11 +23,11 @@ function findSame() {
 
 function validateReport() {
 	var arr = document.getElementsByName("type");
-	if(arr.length > 0) {
-		report(arr);	
+	if(arr[0] === nul) {
+		window.alert("Please choose at least one trait.");
 	}
 	else {
-		window.alert("Please choose at least one trait.");	
+		report(arr);	
 	}
 }
 
