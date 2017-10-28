@@ -29,7 +29,7 @@ function validateReport() {
 	}
 	})
 	
-	if(arr[0] === null) {
+	if(userOneInfo.length === 0) {
 		window.alert("Please choose at least one trait.");
 	}
 	else {
