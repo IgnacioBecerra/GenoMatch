@@ -21,9 +21,17 @@ function findSame() {
 }
 
 
-function report() {
+function validateReport() {
 	var arr = document.getElementsByName("type");
+	if(arr.length > 0) {
+		report();	
+	}
+	else {
+		window.alert("Please choose at least one trait.");	
+	}
+}
 
+function report() {
 	arr.forEach(function(elem){
 	if (elem.checked) {
 		userOneInfo.push(elem);     
