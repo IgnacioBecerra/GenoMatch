@@ -33,16 +33,16 @@ function validateReport() {
 		window.alert("Please choose at least one trait.");
 	}
 	else {
-		report(arr);	
+		report();	
 	}
 }
 
-function report(arr) {
+function report() {
 	if(findSimilarPartner === false) {
-		percentage = algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE, arr);	
+		percentage = algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);	
 	}
 	else {
-		percentage = HUNDRED_PERCENT - algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE, arr);
+		percentage = HUNDRED_PERCENT - algorithm(userOneInfo, MAX_ATTRIBUTE_SCORE);
 	}
 
 	var matchRating = "";
@@ -87,7 +87,7 @@ function report(arr) {
 }
 
 // Returns the difference percentage for user one and user two
-function algorithm(userOneInfo, maxAttributeScore, arr) {
+function algorithm(userOneInfo, maxAttributeScore) {
 
 	var numOfAttributes = userOneInfo.length;
 	var difference = 0;
